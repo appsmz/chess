@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:key="screenOn"
+        android:title="@string/settings_screenOn_title"
+        android:summary="@string/settings_screenOn_desc"
+        android:defaultValue="true" />
+
+    <Preference
+        android:key="aboutKey"
+        android:title="@string/about_label" />
+    <Preference
+        android:key="rateKey"
+        android:title="@string/settings_rate_label" />
+    <Preference
+        android:key="otherKey"
+        android:title="@string/settings_other_apps_label" />
+    <Preference
+        android:key="privacyPolicy"
+        android:title="@string/privacy_policy" />
+
+</PreferenceScreen>

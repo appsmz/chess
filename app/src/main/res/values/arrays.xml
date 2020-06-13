@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="menu_button_text_sizes">
+        <item>14sp</item>
+        <item>28sp</item>
+    </array>
+</resources>

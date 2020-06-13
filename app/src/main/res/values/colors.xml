@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#707070</color>
+    <color name="colorPrimaryDark">#0C3364</color>
+    <color name="colorSelected">#2D8F33</color>
+    <color name="colorSelectedDark">#205E1C</color>
+    <color name="colorAccent">#FF6E50</color>
+    <color name="colorAccentPressed">#ff7d62</color>
+    <color name="colorAccentDark">#B45032</color>
+    <color name="colorAccentDarkPressed">#bc6247</color>
+    <color name="darkBackground">#494949</color>
+    <color name="darkTextColor">#DDDDDD</color>
+    <color name="white">#FFFFFF</color>
+    <color name="panelBorder">#505050</color>
+    <color name="panelBorderSelected">#2B802B</color>
+    <color name="panelBorderSelectedDark">#366936</color>
+    <color name="panelColor">#FFFFFF</color>
+    <color name="panelColorDark">#878787</color>
+    <color name="promotionButtonColor">#E48D7B</color>
+    <color name="gameButtonNormal">#a6a6a6</color>
+    <color name="gameButtonDisabled">#C9C9C9</color>
+</resources>

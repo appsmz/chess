@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/ng_main_layout">
+
+    <LinearLayout
+        android:id="@+id/titleLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.18"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/ng_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_game_title"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <!-- SINGLE/MULTI -->
+    <LinearLayout
+        android:id="@+id/singleMultiLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_2"
+        app:layout_constraintTop_toBottomOf="@id/titleLayout"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.42">
+
+        <TextView
+            android:id="@+id/ng_single_multi_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/single_player_multi_player"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ng_single_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/single_player_icon"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_3"
+        app:layout_constraintTop_toBottomOf="@id/titleLayout"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <ImageButton
+        android:id="@+id/ng_multi_player"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/multi_player_icon"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_4"
+        app:layout_constraintTop_toBottomOf="@id/titleLayout"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <!-- DIFFICULTY -->
+    <LinearLayout
+        android:id="@+id/diffLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_2"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_1"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.42">
+
+        <TextView
+            android:id="@+id/ng_cpu_difficulty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cpu_difficulty"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ng_cpu_diff_minus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="20sp"
+        android:text="-"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_3"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_1"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <LinearLayout
+        android:id="@+id/diffValueLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.09"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_4"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_1"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15">
+
+        <TextView
+            android:id="@+id/ng_diff_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ng_cpu_diff_plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="20sp"
+        android:text="+"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_5"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_1"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <!-- PLAYER COLOR -->
+
+    <LinearLayout
+        android:id="@+id/playerColorLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_2"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_2"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.42">
+
+        <TextView
+            android:id="@+id/ng_player_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/player_color"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/ng_color_white"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/king_white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_3"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_2"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <ImageButton
+        android:id="@+id/ng_color_black"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/king_black"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_4"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_2"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <ImageButton
+        android:id="@+id/ng_color_changing"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/black_white"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_5"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_2"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <!-- GAME TIMER -->
+
+    <LinearLayout
+        android:id="@+id/gameTimerLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_2"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_3"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.42">
+
+        <TextView
+            android:id="@+id/ng_game_timer_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/game_timer"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ng_game_timer_minus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="20sp"
+        android:text="-"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_3"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_3"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <LinearLayout
+        android:id="@+id/gameTimerValueLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_4"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_3"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15">
+
+        <TextView
+            android:id="@+id/ng_game_timer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ng_game_timer_plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="20sp"
+        android:text="+"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_5"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_3"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+
+    <!-- MOVE TIMER -->
+
+    <LinearLayout
+        android:id="@+id/moveTimerLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_2"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_4"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.42">
+
+        <TextView
+            android:id="@+id/ng_move_timer_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/move_timer"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ng_move_timer_minus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="-"
+        android:textSize="20sp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_3"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_4"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <LinearLayout
+        android:id="@+id/moveTimerValueLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_4"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_4"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15">
+
+        <TextView
+            android:id="@+id/ng_move_time_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/ng_move_timer_plus"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:textSize="20sp"
+        android:text="+"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toLeftOf="@id/guide_ln_vert_5"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_4"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15" />
+
+    <!-- START BUTTON -->
+    <Button
+        android:id="@+id/ng_start_button"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Start"
+        android:layout_marginTop="10dp"
+        app:layout_constraintLeft_toRightOf="@id/guide_ln_vert_1"
+        app:layout_constraintTop_toBottomOf="@id/guide_ln_hor_5"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.6"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.08" />
+
+    <!-- GUIDELINES -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_vert_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.20" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_vert_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_vert_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_vert_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_vert_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.90" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_hor_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.30" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_hor_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.42" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_hor_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.54" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_hor_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_ln_hor_5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.82" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
